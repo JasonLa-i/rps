@@ -8,18 +8,40 @@ function getComputerChoice() {
         return "paper"
     }
 }
+let computerSelection = getComputerChoice();
+// let playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
 
-let playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase();
+let playerScore = 0;
+let computerScore = 0;
+let playerSelection = 'rock';
 
-function playGame(playerChoice, getComputerChoice()){
-    if (playerChoice === 'rock' && getComputerChoice() === 'rock'){
-        console.log('its a tie! you both picked rock')
-    } else if (playerChoice === 'rock' && getComputerChoice() === 'paper'){
-        console.log('you lose! computer picked paper')
-    } else if (playerChoice === 'rock' && getComputerChoice() === 'scissors'){
-        console.log('you win!! computer picked scissors')
+function playGame(playerChoice, computerSelection){
+    if (playerChoice === computerSelection){
+        return('its a tie!')
+    } else if 
+        ((playerChoice === 'rock' && computerSelection === 'paper') ||
+        (playerChoice === 'paper' && computerSelection === 'scissors') ||
+        (playerChoice === 'scissors' && computerSelection === 'rock'))
+    {
+        return('you lose!')
+        computerScore+=1
+    } else if 
+        ((playerChoice === 'rock' && computerSelection === 'scissors') ||
+        (playerChoice === 'paper' && computerSelection === 'scissors') ||
+        (playerChoice === 'scissors' && computerSelection === 'rock'))
+    {
+        return('you win!')
+        playerScore+=1;
     }
 }
+// console.log(playGame(playerSelection, computerSelection))
+
+// function game(){
+//     playGame(playerSelection, computerSelection){
+//         if 
+//         for (let playerScore = 0; playerScore <= 5; playerScore++)
+//     }
+// }
 
 // if player submits 1 of 3 responses, then output 1 of 3 results per response. 
 // 1 win 1 lose 1 draw
@@ -28,6 +50,5 @@ function playGame(playerChoice, getComputerChoice()){
 
 // is there a way to streamline this.
 
-playerchoice
-
 // then first to 5 is a for loop let i=0 i<=5 i++ 
+
